@@ -7,10 +7,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-agent_llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0.1)
+agent_llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0)
 
 # Writer & Critic chains do pure text generation (no tools) → fast small model is fine.
-chain_llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0.1)
+chain_llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0)
 
 
 # ── Agents ────────────────────────────────────────────────────────────────────
