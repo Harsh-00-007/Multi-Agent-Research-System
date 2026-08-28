@@ -7,14 +7,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# ── Models ────────────────────────────────────────────────────────────────────
-# Agents need reliable function/tool calling → use a larger, capable model.
-# llama-3.1-8b-instant is too small: it generates <function=name>{} XML syntax
-# instead of proper JSON tool calls, causing Groq to return 400 tool_use_failed.
-agent_llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+agent_llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0.1)
 
 # Writer & Critic chains do pure text generation (no tools) → fast small model is fine.
-chain_llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
+chain_llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0.1)
 
 
 # ── Agents ────────────────────────────────────────────────────────────────────
