@@ -319,7 +319,7 @@ with st.sidebar:
     st.markdown("**🛠 Stack**", help="Libraries powering this system")
 
     stack = [
-        ("🦙", "Groq",         "LLaMA 3.1 8B Instant"),
+        ("🦙", "Groq",         "openai/gpt-oss-120b"),
         ("🔗", "LangChain",    "Agent orchestration"),
         ("🌐", "Tavily",       "Real-time web search"),
         ("🍲", "BeautifulSoup","HTML scraping & cleaning"),
